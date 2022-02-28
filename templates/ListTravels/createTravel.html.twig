@@ -1,0 +1,13 @@
+{% extends 'ListTravels/base.html.twig' %}
+{% block body %}
+<div class="contForm">
+    <h2>Introduce los datos de tu proximo viaje</h2>
+    {{ form_start(travelForm) }}
+        {{ form_widget(travelForm) }}
+        <button type="submit">Añadir</button>
+    {{ form_end(travelForm) }}
+    {% for message in app.flashes('exito') %}
+        <p>{{ message }}</p>
+</div>
+    {% endfor %}
+{% endblock %}

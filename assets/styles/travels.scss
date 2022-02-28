@@ -1,0 +1,31 @@
+.contAgen{
+    width:100vw;
+    height:70vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &--travel{
+        width:90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &--single{
+        text-align: center;
+    }
+}
+
+
+
+.imgSlide{
+    max-width: 350px;
+    max-height: 170px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    &:hover{
+        box-shadow: 0 0 10px white;
+        transform: scale(1.2);
+    }
+}

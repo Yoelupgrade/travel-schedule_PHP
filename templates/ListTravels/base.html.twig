@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        <title>{% block title %}Agenda de Viajes{% endblock %}</title>
+
+        {% block javascripts %}
+            {#{ encore_entry_script_tags('app') }#}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar">
+             <h1 class="h1">Travel Schedule</h1>
+                    <div class="navbar-nav">
+                        <a class="" href="{{ path("home") }}"><img class="iconNav" src="https://freepikpsd.com/file/2020/03/Home-PNG-File.png"></a>
+                        <a class="" href="{{ path("travels") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/586/586802.png"></a>
+                        {# {% if is_granted('ROLE_USER') %} #}
+                        <a class="nav-link" href="{{ path("insertTravel") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/2149/2149336.png"></a>
+                        {# {% endif %} #}
+                    </div>
+            </nav>
+        {% block body %}<h1>Página Base de Travels</h1>{% endblock %}
+            {% block js %} {% endblock %}
+        </div>
+    </body>
+</html>

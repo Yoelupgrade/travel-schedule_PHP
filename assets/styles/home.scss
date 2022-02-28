@@ -1,0 +1,15 @@
+.contHome{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 75vh;
+    &--h1{
+        margin:100px;
+    }
+    &--h3{
+        width: 50%;
+        text-align: center;
+    }
+}

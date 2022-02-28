@@ -1,0 +1,27 @@
+{% extends 'ListTravels/base.html.twig' %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+{% block body %}
+    <div class="contSingl">
+        <h2 class="contSingl--h2">{{travel.name}}</h2>
+        <div class="contSingl--travel" >
+            <div class="contSingl--contImg" >
+            <img class="contSingl--img" src="{{travel.image}}" alt="{{travel.name}}"/></div>
+            <ul class="contSingl--ul">
+                <li class="contSingl--ul--li">
+                    <h3>Itinerario</h3>
+                    <p>{{travel.itinerario}}</p>
+                </li>
+                <li class="contSingl--ul--li">
+                    <h3>Descripcion</h3>
+                    <p>{{travel.description}}</p>
+                </li>
+                <li class="contSingl--ul--li">
+                    <h3>Fecha de viaje</h3>
+                    <p>{{travel.date}}</p>
+                </li>
+            </ul>   
+        </div>    
+    </div>
+{% endblock %}

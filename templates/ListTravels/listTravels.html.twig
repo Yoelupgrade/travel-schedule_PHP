@@ -1,0 +1,20 @@
+{% extends 'ListTravels/base.html.twig' %}
+{# {% block stylesheets %}
+    <link href="{{ asset('styles/travels.scss') }}" type="text/css" rel="stylesheet" />
+{% endblock %} #}
+{% block body %}
+<div class="contAgen">
+    <h2>My agenda</h2>
+    <div class="contAgen--travel">
+        {% for travel in travels %}
+            <div class="contAgen--single">
+                <h3>{{travel.name}}</h3>
+                <a href="{{ path("showTravel", {'id': travel.id}) }}" class="anchorImg" >
+                <img class="imgSlide" src="{{travel.image}}" alt="{{travel.name}}"/>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block title %}Listado de Viajes{% endblock %}
