@@ -12,10 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Form\TravelForm;
 use App\Entity\Travels;
 use Doctrine\ORM\EntityManagerInterface;
+
 class TravelsController extends AbstractController{
     
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function homeTravels (){
        return $this->render('ListTravels/home.html.twig');  
@@ -43,9 +44,8 @@ class TravelsController extends AbstractController{
 
     /**
      * @Route("/create/travel", name="insertTravel")
-     * 
+     * @IsGranted("ROLE_ADMIN")
      */
-
     public function addTravel (Request $request, EntityManagerInterface $doctrine)
     {
         $form = $this->createForm(travelForm::class);
@@ -59,7 +59,7 @@ class TravelsController extends AbstractController{
         }
         return $this->renderForm("ListTravels/createTravel.html.twig", ["travelForm" => $form]);
     }
-//@IsGranted("ROLE_ADMIN")
+
 
     /**
      * @Route("/createTravel")

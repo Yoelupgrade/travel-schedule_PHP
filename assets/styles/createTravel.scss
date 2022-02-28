@@ -1,18 +1,20 @@
 .contForm{
-    width: 60%;
+    width: 55%;
     margin: 0 auto;
-    height: 70vh;
+    // height: 70vh;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: rgba(136, 136, 136, 0.514);
     border-radius:10px;
+    box-shadow: 0 0 10px rgba(136, 136, 136, 0.514);
+    padding: 50px 0;
     form{
         display:flex;
         flex-direction: column;
         justify-content:center;
-        height: 50vh;
+        // height: 50vh;
         width: 40%;
         #travel_form{
             text-align: center;
@@ -23,8 +25,17 @@
                 label{
                     margin:5px;
                 }
+                #travel_form_itinerario{
+                    height:15vh;
+                }
+                #travel_form_description{
+                    height:15vh;
+                }
             }
         }
+
+       
+
         button{
             border-radius: 10px;
             margin: 5px auto;

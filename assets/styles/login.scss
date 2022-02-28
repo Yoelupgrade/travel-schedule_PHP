@@ -1,0 +1,31 @@
+.cont{
+display: flex;
+justify-content: center;
+align-items: center;
+margin:auto;
+min-height: 75vh;
+&--Form{
+    display:flex !important;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40%;
+    height:40vh;
+    background-color: rgba(255, 255, 255, 0.61);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+}
+button{
+    border-radius: 10px;
+            margin: 5px auto;
+            color:white;
+            font-weight: bold;
+            width: 20%;
+            padding: 5px 10px;
+            background-color: rgb(0, 132, 255);
+}
+
+.mb-3{
+    margin-top: 15px;
+}

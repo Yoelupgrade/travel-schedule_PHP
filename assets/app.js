@@ -11,6 +11,7 @@ import './styles/travels.scss';
 import './styles/singleTravel.scss';
 import './styles/home.scss';
 import './styles/createTravel.scss';
+import './styles/login.scss';
 
 // start the Stimulus application
 import './bootstrap';
