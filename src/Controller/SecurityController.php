@@ -10,7 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 
+use App\Form\UserType;
 class SecurityController extends AbstractController
 {
     #[Route(path: '/login', name: 'app_login')]
@@ -48,4 +50,19 @@ class SecurityController extends AbstractController
         $doctrine->persist($admin);
         $doctrine->flush();
     }
+
+    // #[Route(path: '/register/user', name: 'register_user')]
+    // public function addTravel (Request $request, EntityManagerInterface $doctrine)
+    // {
+    //     $form = $this->createForm(UserType::class);
+    //     $form->handleRequest($request);
+
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $user = $form->getData();
+    //         $doctrine->persist($user);
+    //         $doctrine->flush();
+    //         $this->addFlash('exito', 'Enhorabuena, ya estas registrado');
+    //     }
+    //     return $this->renderForm("ListTravels/createUser.html.twig", ["userForm" => $form]);
+    // }
 }

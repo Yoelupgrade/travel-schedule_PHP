@@ -24,8 +24,13 @@
     height: 170px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
+    opacity: 80%;
     &:hover{
+        transition: 0.5s;
         box-shadow: 0 0 10px white;
         transform: scale(1.2);
+        opacity: 100%;
+        
+        
     }
 }
