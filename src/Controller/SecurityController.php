@@ -51,18 +51,4 @@ class SecurityController extends AbstractController
         $doctrine->flush();
     }
 
-    // #[Route(path: '/register/user', name: 'register_user')]
-    // public function addTravel (Request $request, EntityManagerInterface $doctrine)
-    // {
-    //     $form = $this->createForm(UserType::class);
-    //     $form->handleRequest($request);
-
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         $user = $form->getData();
-    //         $doctrine->persist($user);
-    //         $doctrine->flush();
-    //         $this->addFlash('exito', 'Enhorabuena, ya estas registrado');
-    //     }
-    //     return $this->renderForm("ListTravels/createUser.html.twig", ["userForm" => $form]);
-    // }
 }

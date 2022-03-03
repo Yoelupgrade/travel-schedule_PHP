@@ -18,13 +18,14 @@
                     <div class="navbar-nav">
                         <a class="" href="{{ path("home") }}"><img class="iconNav" src="https://freepikpsd.com/file/2020/03/Home-PNG-File.png"></a>
                         <a class="" href="{{ path("app_login") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/272/272354.png"></a>
+                        <a class="" href="{{ path("app_register") }}"><img class="iconNav" src="https://cutewallpaper.org/24/sign-up-png/sign-up-free-people-icons.png"></a>
                         
                         {% if is_granted('ROLE_USER') %}
                          <a class="" href="{{ path("travels") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/586/586802.png"></a>
+                         <a class="nav-link" href="{{ path("insertTravel") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/2149/2149336.png"></a>
                          {% endif %}
 
                          {% if is_granted('ROLE_ADMIN') %}
-                         <a class="" href="{{ path("travels") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/586/586802.png"></a>
                         <a class="nav-link" href="{{ path("insertTravel") }}"><img class="iconNav" src="https://cdn-icons-png.flaticon.com/512/2149/2149336.png"></a>
                          {% endif %} 
                     </div>
